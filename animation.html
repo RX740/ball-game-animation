@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation ki duniya</title>
+    
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            box-sizing: border-box;
+        }
+
+        .container{
+            width: 1700px;
+            height: 800px;
+            background-color: black;
+            border:8px solid hotpink;
+            overflow: hidden;
+
+        }
+
+        #box1{
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            width: 400px;
+            height: 100px;
+            background-color: crimson;
+            border: 2px solid white;
+            margin: 10px;
+            animation-name: yo-yo;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-delay: 1s;
+            /* animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+            animation-timing-function: ease-in-out;
+            animation-direction: alternate;
+        }
+
+        @keyframes yo-yo {
+            0%{
+                top:0%;
+                left:0%;
+            }
+
+            25%{
+                top: 0%;
+                left: 25%;
+            
+            }
+
+            50%{
+                top: 0%;
+                left: 50%;
+            }
+            
+            100%{
+                top: 0%;
+                left: 1200px;
+            }
+ 
+            /*from{
+                top: 0%;
+                left: 0%;
+            }
+
+            to{
+                top: 0%;
+                left: 70%;
+            
+            } */
+        }
+
+        
+        #box2{
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            width: 400px;
+            height: 100px;
+            background-color: crimson;
+            border: 2px solid white;
+            margin: 10px;
+            animation-name: yo-yo-2;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-delay: 1s;
+            /* animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+            animation-timing-function: ease-in-out;
+            animation-direction: alternate;
+        }
+
+        @keyframes yo-yo-2{
+            0%{
+                top:55%;
+                left: 1200px;
+            }
+
+            25%{
+                top: 55%;
+                left: 50%;
+            
+            }
+
+            50%{
+                top: 55%;
+                left: 35%;
+            }
+            
+            100%{
+                top: 55%;
+                left: 0%;
+            }
+
+            /* from{
+                top: 55%;
+                left: 70%;
+            }
+
+            to{
+                top: 55%;
+                left: 0%;
+            
+            } */
+            
+        }
+
+        img{
+            width: 90px;
+            height: 90px;
+        }
+        #box3{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+            /* top: 10%;
+            left: 45%; */
+            width: 100px;
+            height: 100px;
+            background-color: darkturquoise;
+            border: 5px solid white;
+            border-radius: 50px;
+            margin: 10px;
+            /* @keyframes duration | easing function | delay | iteration-count | direction
+             | fill-mode | play-state | name */
+            animation: 5s ease-in-out 1s infinite alternate none ball;
+        }
+
+        @keyframes ball {
+
+            0%{
+                top:0%;
+                left: 0%;
+            }
+
+            25%{
+                top:55%;
+                left: 1100px;
+                /* top: 55%;
+                left: 70%; */
+            
+            }
+
+            50%{
+                top: 0%;
+                left: 50%;
+                /* top: 0%;
+                left: 25%; */
+            }
+            
+            100%{
+                top: 55%;
+                left: 0%;
+                /* top: 55%;
+                left: 0%; */
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1"><h2>Life</h2></div>
+        <div class="box" id="box3"><img src="myphoto.png"/></div>
+        <div class="box" id="box2"><h2>Responsiblity</h2></div>/div>
+        <div class="box" id="box4"></div>
+    </div>
+</body>
+</html>
